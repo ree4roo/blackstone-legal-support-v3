@@ -301,6 +301,7 @@ Enquiry Form
                     </div>
 
                     <form
+    id="contactForm"
     action="https://formspree.io/f/xaqrnyjw"
     method="POST">
 
@@ -572,5 +573,19 @@ Footer
 
 <script src="assets/js/script.js"></script>
 
+<script>
+document
+.getElementById("contactForm")
+.addEventListener("submit", function () {
+
+    setTimeout(function () {
+
+        window.location.href =
+        "https://ree4roo.github.io/blackstone-legal-support-v3/thank-you.html";
+
+    }, 1500);
+
+});
+</script>
 </body>
 </html>
