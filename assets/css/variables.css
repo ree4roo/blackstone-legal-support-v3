@@ -1,0 +1,40 @@
+/* ==========================================================
+   BLACKSTONE LEGAL SUPPORT
+   VARIABLES
+========================================================== */
+
+:root{
+
+    /* Brand Colours */
+
+    --primary:#1F3A5F;
+    --primary-dark:#162C49;
+
+    --accent:#C49A3A;
+    --accent-dark:#AA842C;
+
+    --white:#FFFFFF;
+    --light:#F8F9FA;
+
+    --text:#212529;
+    --muted:#6C757D;
+
+    --border:#E9ECEF;
+
+    /* Typography */
+
+    --font-heading:'Merriweather', serif;
+    --font-body:'Inter', sans-serif;
+
+    /* Layout */
+
+    --radius:18px;
+
+    --shadow-sm:0 8px 20px rgba(0,0,0,.05);
+    --shadow-md:0 16px 40px rgba(0,0,0,.08);
+
+    --transition:.30s ease;
+
+    --container:1200px;
+
+}
