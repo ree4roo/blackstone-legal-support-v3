@@ -5,11 +5,16 @@
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-21Q3MZXTYD"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
 
-  gtag('config', 'G-21Q3MZXTYD');
+gtag('consent', 'default', {
+  analytics_storage: 'denied'
+});
+
+gtag('js', new Date());
+
+gtag('config', 'G-21Q3MZXTYD');
 </script>
 
     <meta charset="UTF-8">
@@ -22,7 +27,7 @@ Privacy Policy | Blackstone Legal Support
 <meta name="description"
       content="Read the Privacy Policy for Blackstone Legal Support, including how personal information is collected and processed.">
 
-    <meta name="description" content="Professional legal support including SEND assistance, tribunal preparation, document drafting and general legal support throughout England.">
+    
 
     <!-- Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
@@ -229,24 +234,52 @@ Privacy Content
 
             <h3 class="mt-5">
 
-                Data Protection
+    Data Protection
 
-            </h3>
+</h3>
 
-            <p>
+<p>
 
-                We take reasonable steps to protect personal information and
-                will not share information with third parties except where
-                required by law or where consent has been provided.
+    We take reasonable steps to protect personal information and
+    will not share information with third parties except where
+    required by law or where consent has been provided.
 
-            </p>
+</p>
 
 
-            <h3 class="mt-5">
+<h3 class="mt-5">
 
-                Contact
+    Cookies and Analytics
 
-            </h3>
+</h3>
+
+<p>
+
+    This website uses cookies and Google Analytics to understand
+    how visitors use our website and to improve our services.
+
+</p>
+
+<p>
+
+    Google Analytics cookies are only enabled after you have
+    provided consent via our cookie banner.
+
+</p>
+
+<p>
+
+    You may withdraw your consent at any time by clearing your
+    browser cookies and local storage settings.
+
+</p>
+
+
+<h3 class="mt-5">
+
+    Contact
+
+</h3>
 
             <p class="mb-0">
 
@@ -414,6 +447,101 @@ Footer
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
 <script src="assets/js/script.js"></script>
+
+<div id="cookie-banner" class="cookie-banner">
+
+    <div class="cookie-text">
+
+        We use cookies and Google Analytics to improve our website.
+        See our <a href="privacy.html">Privacy Policy</a>.
+
+    </div>
+
+    <div class="cookie-buttons">
+
+        <button id="reject-cookies"
+                class="cookie-reject">
+
+            Essential Only
+
+        </button>
+
+        <button id="accept-cookies"
+                class="cookie-accept">
+
+            Accept
+
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+    const banner =
+        document.getElementById('cookie-banner');
+
+    const accept =
+        document.getElementById('accept-cookies');
+
+    const reject =
+        document.getElementById('reject-cookies');
+
+    const consent =
+        localStorage.getItem('cookieConsent');
+
+    if(consent === 'accepted'){
+
+        banner.style.display = 'none';
+
+        gtag('consent', 'update', {
+            analytics_storage: 'granted'
+        });
+    }
+
+    if(consent === 'rejected'){
+
+        banner.style.display = 'none';
+
+        gtag('consent', 'update', {
+            analytics_storage: 'denied'
+        });
+    }
+
+    accept.addEventListener('click', function(){
+
+        localStorage.setItem(
+            'cookieConsent',
+            'accepted'
+        );
+
+        gtag('consent', 'update', {
+            analytics_storage: 'granted'
+        });
+
+        banner.style.display = 'none';
+
+    });
+
+    reject.addEventListener('click', function(){
+
+        localStorage.setItem(
+            'cookieConsent',
+            'rejected'
+        );
+
+        gtag('consent', 'update', {
+            analytics_storage: 'denied'
+        });
+
+        banner.style.display = 'none';
+
+    });
+
+});
+</script>
 
 </body>
 </html>

@@ -5,11 +5,16 @@
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-21Q3MZXTYD"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
 
-  gtag('config', 'G-21Q3MZXTYD');
+gtag('consent', 'default', {
+  analytics_storage: 'denied'
+});
+
+gtag('js', new Date());
+
+gtag('config', 'G-21Q3MZXTYD');
 </script>
 
     <meta charset="UTF-8">
@@ -619,6 +624,101 @@ document
         "https://ree4roo.github.io/blackstone-legal-support-v3/thank-you.html";
 
     }, 1500);
+
+});
+</script>
+
+<div id="cookie-banner" class="cookie-banner">
+
+    <div class="cookie-text">
+
+        We use cookies and Google Analytics to improve our website.
+        See our <a href="privacy.html">Privacy Policy</a>.
+
+    </div>
+
+    <div class="cookie-buttons">
+
+        <button id="reject-cookies"
+                class="cookie-reject">
+
+            Essential Only
+
+        </button>
+
+        <button id="accept-cookies"
+                class="cookie-accept">
+
+            Accept
+
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+    const banner =
+        document.getElementById('cookie-banner');
+
+    const accept =
+        document.getElementById('accept-cookies');
+
+    const reject =
+        document.getElementById('reject-cookies');
+
+    const consent =
+        localStorage.getItem('cookieConsent');
+
+    if(consent === 'accepted'){
+
+        banner.style.display = 'none';
+
+        gtag('consent', 'update', {
+            analytics_storage: 'granted'
+        });
+    }
+
+    if(consent === 'rejected'){
+
+        banner.style.display = 'none';
+
+        gtag('consent', 'update', {
+            analytics_storage: 'denied'
+        });
+    }
+
+    accept.addEventListener('click', function(){
+
+        localStorage.setItem(
+            'cookieConsent',
+            'accepted'
+        );
+
+        gtag('consent', 'update', {
+            analytics_storage: 'granted'
+        });
+
+        banner.style.display = 'none';
+
+    });
+
+    reject.addEventListener('click', function(){
+
+        localStorage.setItem(
+            'cookieConsent',
+            'rejected'
+        );
+
+        gtag('consent', 'update', {
+            analytics_storage: 'denied'
+        });
+
+        banner.style.display = 'none';
+
+    });
 
 });
 </script>

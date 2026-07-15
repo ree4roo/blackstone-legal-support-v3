@@ -1555,3 +1555,94 @@ footer a:hover,
     color:#C49A3A;
 
 }
+
+/* ========================================
+   Cookie Banner
+======================================== */
+
+.cookie-banner{
+
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+
+    background:#111827;
+    color:#fff;
+
+    padding:1rem 1.5rem;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:1rem;
+
+    z-index:9999;
+
+    box-shadow:0 -5px 20px rgba(0,0,0,.2);
+}
+
+.cookie-banner a{
+
+    color:#d4af37;
+}
+
+.cookie-banner button{
+
+    border:none;
+    background:#d4af37;
+    color:#111;
+
+    padding:.75rem 1.5rem;
+    border-radius:8px;
+
+    font-weight:600;
+    cursor:pointer;
+}
+
+@media (max-width:768px){
+
+    .cookie-banner{
+
+        flex-direction:column;
+        text-align:center;
+    }
+}
+
+.cookie-buttons{
+
+    display:flex;
+    gap:.75rem;
+    flex-wrap:wrap;
+}
+
+.cookie-accept{
+
+    border:none;
+    background:#d4af37;
+    color:#111;
+
+    padding:.75rem 1.5rem;
+    border-radius:8px;
+
+    font-weight:600;
+    cursor:pointer;
+}
+
+.cookie-reject{
+
+    border:1px solid rgba(255,255,255,.3);
+    background:transparent;
+    color:#fff;
+
+    padding:.75rem 1.5rem;
+    border-radius:8px;
+
+    font-weight:600;
+    cursor:pointer;
+}
+
+.cookie-reject:hover{
+
+    background:rgba(255,255,255,.08);
+}
