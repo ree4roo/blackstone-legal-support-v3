@@ -1646,3 +1646,13 @@ footer a:hover,
 
     background:rgba(255,255,255,.08);
 }
+
+#pricing .card{
+    border-radius:20px;
+    transition:all .3s ease;
+}
+
+#pricing .card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 1rem 2rem rgba(0,0,0,.12);
+}
