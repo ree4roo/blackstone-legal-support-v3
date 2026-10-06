@@ -1145,71 +1145,7 @@ Footer
 
 </div>
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
 
-    const banner =
-        document.getElementById('cookie-banner');
-
-    const accept =
-        document.getElementById('accept-cookies');
-
-    const reject =
-        document.getElementById('reject-cookies');
-
-    const consent =
-        localStorage.getItem('cookieConsent');
-
-    if(consent === 'accepted'){
-
-        banner.style.display = 'none';
-
-        gtag('consent', 'update', {
-            analytics_storage: 'granted'
-        });
-    }
-
-    if(consent === 'rejected'){
-
-        banner.style.display = 'none';
-
-        gtag('consent', 'update', {
-            analytics_storage: 'denied'
-        });
-    }
-
-    accept.addEventListener('click', function(){
-
-        localStorage.setItem(
-            'cookieConsent',
-            'accepted'
-        );
-
-        gtag('consent', 'update', {
-            analytics_storage: 'granted'
-        });
-
-        banner.style.display = 'none';
-
-    });
-
-    reject.addEventListener('click', function(){
-
-        localStorage.setItem(
-            'cookieConsent',
-            'rejected'
-        );
-
-        gtag('consent', 'update', {
-            analytics_storage: 'denied'
-        });
-
-        banner.style.display = 'none';
-
-    });
-
-});
-</script>
 
 </body>
 </html>
