@@ -85,18 +85,26 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LegalService",
-  "name": "Blackstone Legal Support",
-  "url": "https://blackstonelegalsupport.co.uk/",
-  "email": "info@blackstonelegalsupport.co.uk",
-  "telephone": "01253 257292",
-  "openingHours": "Mo-Fr 09:00–17:00",
-  "areaServed": "United Kingdom",
-  "description": "Professional SEND, EHCP and education support services.",
-  "address": {
-    "@type": "PostalAddress",
-    "addressCountry": "GB"
-  }
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://blackstonelegalsupport.co.uk/#organization",
+      "name": "Blackstone Legal Support",
+      "url": "https://blackstonelegalsupport.co.uk/",
+      "logo": "https://blackstonelegalsupport.co.uk/assets/images/logo.png",
+      "email": "info@blackstonelegalsupport.co.uk",
+      "telephone": "+44 1253 257292",
+      "description": "Practical SEND, EHCP and education document support for families.",
+      "areaServed": { "@type": "AdministrativeArea", "name": "Lancashire" }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://blackstonelegalsupport.co.uk/#website",
+      "url": "https://blackstonelegalsupport.co.uk/",
+      "name": "Blackstone Legal Support",
+      "publisher": { "@id": "https://blackstonelegalsupport.co.uk/#organization" }
+    }
+  ]
 }
 </script>
 
